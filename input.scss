@@ -1,3 +1,52 @@
-h1 {
-  background-color: pink;
+@font-face {
+  font-family: "Humanbumsuk";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  color: rgb(22, 22, 22);
+  font-family: "Karla", sans-serif;
+}
+
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+main {
+  position: fixed;
+  z-index: 2; // 레이어정렬 (z축을 말함) - 3D관점으로 봐야함
+  width: 100vw;
+  height: 100vh;
+
+  display: flex; // 3가지 요소를 배치시킬것임
+  flex-direction: column; // column을 이용해 세로로 정렬
+  justify-content: center; //세로방향 기준 가운데로 정렬
+  align-items: center; //세로방향 교차축
+}
+
+.timeshadow {
+}
+
+.time {
+  font-family: Humanbumsuk;
+  animation-delay: 2s;
+  font-size: 80px;
+  font-style: italic;
+  color: whitesmoke;
+  text-shadow: 100vh;
+  border: 5px solid whitesmoke;
+  border-radius: 50%;
+  font-weight: 500;
+  padding: 50px;
+  width: 310px;
+  box-shadow: 5px 8px 15px 1px rgb(255, 255, 255);
 }
