@@ -33,9 +33,6 @@ main {
   align-items: center; //세로방향 교차축
 }
 
-.timeshadow {
-}
-
 .time {
   font-family: Humanbumsuk;
   animation-delay: 2s;
@@ -49,4 +46,27 @@ main {
   padding: 50px;
   width: 310px;
   box-shadow: 5px 8px 15px 1px rgb(255, 255, 255);
+}
+
+.quotes {
+  position: relative;
+  font-size: 60px;
+
+  .quotesAddBtn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    .quotesAddBtn {
+      display: inline-block;
+    }
+  }
+}
+
+.newQuotes {
+  display: none;
 }
