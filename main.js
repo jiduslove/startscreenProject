@@ -2,8 +2,8 @@ const QUOTES = "quotes";
 
 function getTime() {
   const time = document.querySelector(".time"); //자바에서 html에 접근한것
-  //오브젝트 document , 함수 querySelector(접근할 수 있는 함수는 다양)
-  // # = id 접근 , . = class 접근
+  /*오브젝트 document , 함수 querySelector(접근할 수 있는 함수는 다양)
+   # = id 접근 , . = class 접근 */
   const newDate = new Date(); //()안에 특정한 날짜값을 넣을수도 있다.
 
   const hours = String(newDate.getHours()).padStart(2, "0");
@@ -21,11 +21,11 @@ function getTime() {
     return strTime;
   }
 
-  //  if (seconds.toString().length === 1) { // 문자열로 바꿔주는 함수 .toString()
-  //     seconds = "0" + seconds;
-  //   }// 첫번째 방법 !
+  /* if (seconds.toString().length === 1) { // 문자열로 바꿔주는 함수 .toString()
+      seconds = "0" + seconds;
+    }// 첫번째 방법 !
 
-  //   time.innerText = hours + ":" + minutes + ":" + seconds; // 배운방법
+      time.innerText = hours + ":" + minutes + ":" + seconds;  배운방법*/
   time.innerText = `${hours}:${minutes}:${seconds}`; // 강사님 방법
 }
 

@@ -42,22 +42,25 @@ main {
   font-weight: 500;
   padding: 50px;
   width: 310px;
-  box-shadow: 5px 8px 15px 1px rgb(255, 255, 255);
+  box-shadow: 5px 8px 10px 1px rgb(255, 255, 255);
 }
 
 .quotes {
   position: relative;
-  font-size: 60px;
+  font-size: 40px;
+  top: 30px;
 }
 .quotes .quotesAddBtn {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 120%;
   right: 50%;
   transform: translate(50%, -50%);
 }
 .quotes:hover .quotesAddBtn {
   display: inline-block;
+  color: rgb(129, 109, 109);
+  background-color: rgb(246, 231, 203);
 }
 
 .newQuotes {

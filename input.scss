@@ -26,9 +26,8 @@ main {
   z-index: 2; // 레이어정렬 (z축을 말함) - 3D관점으로 봐야함
   width: 100vw;
   height: 100vh;
-
   display: flex; // 3가지 요소를 배치시킬것임
-  flex-direction: column; // column을 이용해 세로로 정렬
+  flex-direction: column; // column을 이용해 flex 가로정렬을 세로로 정렬
   justify-content: center; //세로방향 기준 가운데로 정렬
   align-items: center; //세로방향 교차축
 }
@@ -45,17 +44,18 @@ main {
   font-weight: 500;
   padding: 50px;
   width: 310px;
-  box-shadow: 5px 8px 15px 1px rgb(255, 255, 255);
+  box-shadow: 5px 8px 10px 1px rgb(255, 255, 255);
 }
 
 .quotes {
   position: relative;
-  font-size: 60px;
+  font-size: 40px;
+  top: 30px;
 
   .quotesAddBtn {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 120%;
     right: 50%;
     transform: translate(50%, -50%);
   }
@@ -63,6 +63,8 @@ main {
   &:hover {
     .quotesAddBtn {
       display: inline-block;
+      color: rgb(129, 109, 109);
+      background-color: rgb(246, 231, 203);
     }
   }
 }
