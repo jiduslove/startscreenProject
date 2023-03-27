@@ -1,8 +1,7 @@
 const QUOTES = "quotes";
 
 function getTime() {
-  const time = document.querySelector(".time"); //자바에서 html에 접근한것
-  /*오브젝트 document , 함수 querySelector(접근할 수 있는 함수는 다양)*/
+  const time = document.querySelector(".time");
 
   const newDate = new Date(); //()안에 특정한 날짜값을 넣을수도 있다.
 
