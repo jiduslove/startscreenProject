@@ -2,8 +2,8 @@ const QUOTES = "quotes";
 
 function getTime() {
   const time = document.querySelector(".time"); //자바에서 html에 접근한것
-  /*오브젝트 document , 함수 querySelector(접근할 수 있는 함수는 다양)
-   # = id 접근 , . = class 접근 */
+  /*오브젝트 document , 함수 querySelector(접근할 수 있는 함수는 다양)*/
+
   const newDate = new Date(); //()안에 특정한 날짜값을 넣을수도 있다.
 
   const hours = String(newDate.getHours()).padStart(2, "0");
@@ -103,7 +103,6 @@ async function onClickSearch() {
 
   console.log("챗 지피티 동작중");
 
-  // 프론트엔드에서 백엔드
   const response = await axios.post(
     "https://holy-fire-2749.fly.dev/chat",
     {
