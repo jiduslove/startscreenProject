@@ -86,22 +86,36 @@ main {
   display: none;
 }
 
+// chatGPT
 .search {
-  margin-top: 30px;
-  font-family: Humanbumsuk;
-  color: whitesmoke;
-  font-size: 30px;
-  .searchLogo {
-    width: 22px;
-    height: 22px;
+  margin-top: 50px;
 
-    animation: spin 20s linear infinite;
+  .searchTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .searchLogo {
+    width: 32px;
+    height: 32px;
+
+    animation: spin 15s linear infinite;
+  }
+
+  .gptsearch {
+    margin-left: 10px;
+    font-family: Humanbumsuk;
+    color: whitesmoke;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
   }
 } // ChatGPT 검색창
 
 .searchResult {
   display: none;
-
+  margin-top: 20px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
