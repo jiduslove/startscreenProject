@@ -1,3 +1,11 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "Humanbumsuk";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2") format("woff2");
@@ -47,23 +55,92 @@ main {
 
 .quotes {
   position: relative;
+  margin-bottom: 30px;
+  font-family: Humanbumsuk;
   font-size: 40px;
+  color: whitesmoke;
   top: 30px;
 }
 .quotes .quotesAddBtn {
   display: none;
   position: absolute;
+  font-family: Humanbumsuk;
+  font-size: 18px;
   top: 120%;
   right: 50%;
   transform: translate(50%, -50%);
 }
 .quotes:hover .quotesAddBtn {
   display: inline-block;
-  color: rgb(129, 109, 109);
-  background-color: rgb(246, 231, 203);
 }
 
 .newQuotes {
+  display: none;
+}
+
+.search {
+  margin-top: 30px;
+  font-family: Humanbumsuk;
+  color: whitesmoke;
+  font-size: 30px;
+}
+.search .searchLogo {
+  width: 22px;
+  height: 22px;
+  animation: spin 20s linear infinite;
+}
+
+.searchResult {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.searchForm {
+  margin-left: 80px;
+}
+
+.nft {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
+}
+.nft img {
+  width: 256px;
+  height: 256px;
+}
+.nft .nftHover {
+  position: absolute;
+  display: none;
+  width: 256px;
+  height: 256px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nft .nftHover a {
+  color: white;
+}
+.nft .nftHover button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -8px;
+  border-radius: 9999px;
+  width: 24px;
+  height: 24px;
+}
+.nft:hover .nftHover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nftView {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 24px;
   display: none;
 }
 
