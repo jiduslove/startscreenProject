@@ -39,21 +39,20 @@ main {
   flex-direction: column; // column을 이용해 flex 가로정렬을 세로로 정렬
   justify-content: center; //세로방향 기준 가운데로 정렬
   align-items: center; //세로방향 교차축
+  text-align: center;
+  position: absolute;
 }
 
 .time {
-  font-family: Humanbumsuk;
-  animation-delay: 2s;
-  font-size: 80px;
-  font-style: italic;
-  color: whitesmoke;
-  text-shadow: 100vh;
-  border: 5px solid whitesmoke;
-  border-radius: 50%;
-  font-weight: 500;
-  padding: 50px;
-  width: 310px;
-  box-shadow: 5px 8px 10px 1px rgb(255, 255, 255);
+  font-family: "Humanbumsuk";
+  font-size: 150px;
+  left: 35%;
+  top: 40%;
+  letter-spacing: 0.05em;
+  padding: 5px 0;
+  transform: translate(-50%, -50%);
+  color: #ffe5bb;
+  text-shadow: 0 0 20px rgb(230, 149, 10), 0 0 20px rgba(10, 175, 230, 0);
 } // 시계
 
 .quotes {
@@ -61,7 +60,8 @@ main {
   margin-bottom: 30px;
   font-family: Humanbumsuk;
   font-size: 40px;
-  color: whitesmoke;
+  color: #ffe5bb;
+  text-shadow: 0 0 20px rgb(230, 149, 10), 0 0 20px rgba(10, 175, 230, 0);
   top: 30px;
   // 명언
 
@@ -89,6 +89,7 @@ main {
 // chatGPT
 .search {
   margin-top: 50px;
+  margin-right: 10px;
 
   .searchTitle {
     display: flex;
@@ -97,16 +98,16 @@ main {
   }
 
   .searchLogo {
-    width: 32px;
-    height: 32px;
-
-    animation: spin 15s linear infinite;
+    width: 42px;
+    height: 42px;
+    animation: spin 10s linear infinite;
   }
 
   .gptsearch {
     margin-left: 10px;
     font-family: Humanbumsuk;
-    color: whitesmoke;
+    color: #ffe5bb;
+    text-shadow: 0 0 20px rgb(230, 149, 10), 0 0 20px rgba(10, 175, 230, 0);
     height: 30px;
     line-height: 30px;
     font-size: 30px;
@@ -120,7 +121,8 @@ main {
 }
 
 .searchForm {
-  margin-left: 80px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .nft {
@@ -130,6 +132,9 @@ main {
   margin: 24px;
 
   img {
+    border: 0px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    opacity: 0.6;
     width: 256px;
     height: 256px;
   }

@@ -25,6 +25,7 @@ function getTime() {
     }// 첫번째 방법 !
 
       time.innerText = hours + ":" + minutes + ":" + seconds;  배운방법*/
+
   time.innerText = `${hours}:${minutes}:${seconds}`; // 강사님 방법
 }
 
@@ -39,12 +40,7 @@ function getQuotes() {
   if (!savedQuotes) {
     localStorage.setItem(
       QUOTES,
-      JSON.stringify([
-        "열심히 살지맙시다.",
-        "그래도 열심히 살자",
-        "아니 싫어",
-        "그럼말고",
-      ])
+      JSON.stringify(["", "그래도 열심히 살자", "아니 싫어", "그럼말고"])
     );
 
     savedQuotes = localStorage.getItem(QUOTES);
