@@ -1,5 +1,19 @@
 const QUOTES = "quotes";
 
+function getDate() {
+  const date = document.querySelector(".date");
+
+  const newDate = new Date();
+
+  const years = String(newDate.getFullYear());
+  const month = String(newDate.getMonth() + 1).padStart(2, "0");
+  const dates = String(newDate.getDate()).padStart(2, "0");
+
+  date.innerText = `${years}년${month}월${dates}일`;
+}
+
+getDate();
+
 function getTime() {
   const time = document.querySelector(".time");
 
@@ -40,7 +54,12 @@ function getQuotes() {
   if (!savedQuotes) {
     localStorage.setItem(
       QUOTES,
-      JSON.stringify(["", "그래도 열심히 살자", "아니 싫어", "그럼말고"])
+      JSON.stringify([
+        "저는 블록체인스쿨을",
+        "성공적으로 마치고싶습니다.",
+        "많은분들의 도움이 필요합니다.",
+        "앞으로 잘부탁드립니다.",
+      ])
     );
 
     savedQuotes = localStorage.getItem(QUOTES);
@@ -58,6 +77,17 @@ function onClickAdd() {
   const newQuotes = document.querySelector(".newQuotes");
 
   newQuotes.style.display = "inline-block";
+}
+
+function onClickDelete() {
+  const newQuotesInput = document.querySelector(".newQuotesInput");
+
+  let savedQuotes = localStorage.getItem(QUOTES);
+
+  let quotesArray = JSON.parse(savedQuotes);
+  quotesArray.pop(newQuotesInput.value);
+
+  localStorage.setItem(QUOTES, JSON.stringify(quotesArray));
 }
 
 function onClickRegist() {
@@ -132,3 +162,27 @@ function onClickToggle(value) {
     nftView.style.display = "inline-block";
   }
 }
+
+const API_KEY = "8a147de15b3d9c5b93a097c7a08175d4"; // 날씨관련 js.
+
+const weatherIcon = document.querySelector(".weatherIcon");
+const weatherTemp = document.querySelector(".weatherTemp");
+
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+
+    fetch(url)
+      .then((Response) => Response.json())
+      .then((data) => {
+        console.log(data);
+        weatherTemp.innerText =
+          data.name + ", " + parseInt(data.main.temp) + "℃";
+
+        weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      }); // fetch - response - data 순으로 진행되며 이대로 기억하여 쓸수도있다.
+  },
+  () => alert("Not allowed!")
+);

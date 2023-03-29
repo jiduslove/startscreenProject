@@ -13,13 +13,22 @@
   </head>
   <body>
     <main>
+      <div>
+      <div class="weather">
+        <img
+          class="weatherIcon"
+          src="https://openweathermap.org/img/wn/10d@2x.png"
+          alt="weather"
+        />
+      <div class="weatherTemp">Seoul, 22℃</div>
+    </div>
+      <div class="date animate__animated animate__fadeInDownBig">date</div>
       <div class="time animate__animated animate__fadeInDownBig">Time</div>
-      
       <div class="quotes">
         <div class="quotesMsg">Quotes</div>
         <button class="quotesAddBtn" onclick="onClickAdd()">
-          새 명언 추가하기
-        </button>
+          명언 추가</button>
+        <button class="quotesDltBtn" onclick="onClickDelete()">명언 삭제</button>
       </div>
       <div class="newQuotes">
         <input class="newQuotesInput" type="text" />
@@ -50,6 +59,7 @@
         </div>
       </div>
       <button class="nftView" onclick="onClickToggle(true)">NFT보기</button>
+    </div>
     </main>
     <video
       class="bgVideo"

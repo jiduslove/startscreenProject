@@ -43,9 +43,18 @@ main {
   position: absolute;
 }
 
+.date {
+  font-family: "Humanbumsuk";
+  animation-duration: 4s;
+  font-size: 70px;
+  color: #ffe5bb;
+  text-shadow: 0 0 20px rgb(230, 149, 10), 0 0 20px rgba(10, 175, 230, 0);
+}
+
 .time {
   font-family: "Humanbumsuk";
   font-size: 150px;
+  animation-duration: 2s;
   left: 35%;
   top: 40%;
   letter-spacing: 0.05em;
@@ -63,20 +72,35 @@ main {
   color: #ffe5bb;
   text-shadow: 0 0 20px rgb(230, 149, 10), 0 0 20px rgba(10, 175, 230, 0);
   top: 30px;
+  left: 20px;
   // 명언
 
   .quotesAddBtn {
     display: none;
     position: absolute;
     font-family: Humanbumsuk;
+
     font-size: 18px;
-    top: 120%;
-    right: 50%;
+    top: 130%;
+    right: 70%;
     transform: translate(50%, -50%);
   } // 새 명언 추가하기 버튼
 
+  .quotesDltBtn {
+    display: none;
+    position: absolute;
+    font-family: Humanbumsuk;
+    font-size: 18px;
+    top: 130%;
+    left: 50%;
+    transform: translate(50%, -50%);
+  }
+
   &:hover {
     .quotesAddBtn {
+      display: inline-block;
+    }
+    .quotesDltBtn {
       display: inline-block;
     }
   }
@@ -123,6 +147,7 @@ main {
 .searchForm {
   margin-left: 50px;
   margin-top: 20px;
+  opacity: 0.6;
 }
 
 .nft {
@@ -178,4 +203,14 @@ main {
   right: 0;
   margin: 24px;
   display: none;
+}
+
+.weather {
+  border-radius: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 30px;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.001);
 }
